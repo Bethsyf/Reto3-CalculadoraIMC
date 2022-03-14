@@ -61,6 +61,7 @@ body {
     padding: 15px;
     border: none;
     border-radius: 10px;
+    font-weight: bold;    
 }
   
 .items {
@@ -72,6 +73,12 @@ body {
 .items label {
     margin-right: 8px;
     font-weight: bold;
+}
+.items input{
+    border: none;
+    border-radius: 10px;
+    padding: 5px;   
+    background-color: rgb(184, 184, 179); 
 }
 
 .title {
@@ -88,4 +95,9 @@ body {
 #imc-label,
 #imc {
     font-size: 40pt;
+}
+
+.imagen{
+    width: 100px;
+    height: 100px;
 }
