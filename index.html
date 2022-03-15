@@ -12,7 +12,7 @@
 
 <body>
     <div class="wrapper">
-        <form class="main-form">
+        <div class="main-form">
             <h2 class="title">CALCULADORA IMC</h2>
             <h4 class="description">Descubra su indice de masa corporal</h4>
             <div class="items">
@@ -32,21 +32,21 @@
             </div>
             <div class="items">
                 <label for="edad">Edad</label>
-                <input id="edad" type="number" name="edad" required >
+                <input id="edad" type="number" name="edad">
             </div>
             <div class="items">
                 <label for="peso">Peso</label>
-                <input id="peso" type="number" name="peso" required>
+                <input id="peso" type="number" name="peso">
                 <span class="acronym">KG</span>
             </div>
             <div class="items">
                 <label for="altura">Altura</label>
-                <input id="altura" type="number" name="altura" required>
+                <input id="altura" type="number" name="altura">
                 <span class="acronym">M</span>
             </div>
             <input class="btn-calcular" type="submit" value="CALCULAR IMC" onclick="calcularImc()">
             
-        </form>
+        </div>
         <div class="result">
             <h2>Resultados</h2>
             <div class="item-result">

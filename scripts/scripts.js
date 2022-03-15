@@ -4,20 +4,20 @@ const btnWoman = document.querySelector("#woman");
 
 btnMan.addEventListener("click", function () {
     btnWoman.style.border = "1px solid white";
-    btnMan.style.border = "1px solid #03db03";
+    btnMan.style.border = "1px solid #149914";
     sex = "Masculino";
 });
 
 btnWoman.addEventListener("click", function () {
     btnMan.style.border = "1px solid white";
-    btnWoman.style.border = "1px solid #03db03";
+    btnWoman.style.border = "1px solid #149914";
     sex = "Femenino";
 });
 
 const stage = {
     bajo: "Por debajo del peso",
     normal: "Saludable",
-    medio: "Con sobrepeso",
+    medio: "Con sobre peso",
     alto: "Obeso",
     extremo: "Obesidad extrema o de alto riesgo",
 };
@@ -69,29 +69,29 @@ function calcularImc() {
     descriptionResult.innerHTML = description.message;
 }
 
-let listaPacientes = [];
+// let listaPacientes = [];
 
-function agregarPaciente(sex, edad, peso, altura){
-    let nuevoPaciente = {
-        sexo: sex,
-        edad: edad,
-        peso: peso,
-        altura: altura
-    };
-    console.log(nuevoPaciente);
-    listaPacientes.push(nuevoPaciente);
-    localStorageListaPacientes(listaPacientes);
-}
+// function agregarPaciente(sex, edad, peso, altura){
+//     let nuevoPaciente = {
+//         sexo: sex,
+//         edad: edad,
+//         peso: peso,
+//         altura: altura
+//     };
+//     console.log(nuevoPaciente);
+//     listaPacientes.push(nuevoPaciente);
+//     localStorageListaPacientes(listaPacientes);
+// }
 
-    function obtenerListaPacientes(){
-    var listaGuardada = localStorage.getItem('listaGuardadaLocal');
-    if (listaGuardada == null){
-        listaPacientes = [];
-    } else {
-        listaPacientes = JSON.parse(listaGuardada);
-    }
-    return listaPacientes;
-}
-function listaPacientesLocalStorage(lista){
-    localStorage.setItem('listaGuardadaLocal', Json.stringigy(lista));
-}
+//     function obtenerListaPacientes(){
+//     var listaGuardada = localStorage.getItem('listaGuardadaLocal');
+//     if (listaGuardada == null){
+//         listaPacientes = [];
+//     } else {
+//         listaPacientes = JSON.parse(listaGuardada);
+//     }
+//     return listaPacientes;
+// }
+// function listaPacientesLocalStorage(lista){
+//     localStorage.setItem('listaGuardadaLocal', Json.stringigy(lista));
+// }
