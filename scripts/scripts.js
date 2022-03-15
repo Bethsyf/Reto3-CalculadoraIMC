@@ -95,3 +95,4 @@ function calcularImc() {
 // function listaPacientesLocalStorage(lista){
 //     localStorage.setItem('listaGuardadaLocal', Json.stringigy(lista));
 // }
+
