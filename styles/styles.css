@@ -1,12 +1,13 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;    
+    font-family: Arial, Helvetica, sans-serif;   
+    background-color: #b1dbb1; 
 }
 
 .wrapper {
     margin: 10% 20%;
-    display: flex;
-    background-color: #f6f6f6;
-    justify-content: space-between;
+    display: flexbox;
+    background-color: #b1dbb1; 
+    
 }
   
 .main-form {
@@ -19,12 +20,13 @@ body {
 }
   
 .result {
-    width: 300px;
+    width: 350pz;
     margin: 10px;
     padding: 20px;
     background-color: white;
     box-shadow: 0 0 0 10px #149914,
                 0 15px 50px;
+    justify-content: center;
 }
   
 .item-result {
@@ -53,7 +55,7 @@ body {
 }
 
 .btn-calcular {
-    display: flex;
+    margin-top: 15px;
     background-color: #149914;
     color: white;
     width: 100%;
@@ -61,7 +63,8 @@ body {
     padding: 15px;
     border: none;
     border-radius: 10px;
-    font-weight: bold;    
+    font-weight: bold;  
+    
 }
   
 .items {
@@ -97,7 +100,6 @@ body {
     font-size: 40pt;
 }
 
-.imagen{
-    width: 100px;
-    height: 100px;
+.image{
+    width: 300px;
 }

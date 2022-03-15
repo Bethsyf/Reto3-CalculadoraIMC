@@ -69,21 +69,29 @@ function calcularImc() {
     descriptionResult.innerHTML = description.message;
 }
 
-let form = document.querySelector("form")
+let listaPacientes = [];
 
-formulario.addEventListener('submit', (e) => {
-    let sex;
-const btnMan = document.querySelector("#man");
-const btnWoman = document.querySelector("#woman");
-    let edad = document.querySelector('#edad').value;
-    let peso = document.querySelector('#peso').value;
-    let altura = document.querySelector('#altura').value;
-    e.preventDefault();
+function agregarPaciente(sex, edad, peso, altura){
+    let nuevoPaciente = {
+        sexo: sex,
+        edad: edad,
+        peso: peso,
+        altura: altura
+    };
+    console.log(nuevoPaciente);
+    listaPacientes.push(nuevoPaciente);
+    localStorageListaPacientes(listaPacientes);
+}
 
-    localStorage.setItem ("sex", sex)
-    localStorage.setItem ("edad", edad)
-    localStorage.setItem ("peso", peso)
-    localStorage.setItem ("altura", altura)
-    form.reset();
-    window.location.href = './index.html';
-})
+    function obtenerListaPacientes(){
+    var listaGuardada = localStorage.getItem('listaGuardadaLocal');
+    if (listaGuardada == null){
+        listaPacientes = [];
+    } else {
+        listaPacientes = JSON.parse(listaGuardada);
+    }
+    return listaPacientes;
+}
+function listaPacientesLocalStorage(lista){
+    localStorage.setItem('listaGuardadaLocal', Json.stringigy(lista));
+}
