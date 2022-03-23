@@ -79,11 +79,15 @@ const mostrarLista = (data, container) => {
     container.innerHTML = "";
 
     data.forEach(element => {
-        container.innerHTML += `<td>${element.sex}<td/>`
-        container.innerHTML += `<td>${element.edad} Años<td/>`
-        container.innerHTML += `<td>${element.peso} Kg<td/>`
-        container.innerHTML += `<td>${element.altura}Mts<td/>`
-        container.innerHTML += `<td>${element.imc}<td/>`
+        container.innerHTML += `
+        <tr>
+            <td class="element" >${sex}</td>
+            <td class="element" >${edad}</td>
+            <td class="element" >${peso}</td>
+            <td class="element" >${altura}</td>
+            <td class="element" >${imc}</td>
+        </tr>
+        `
     });
 }
 
