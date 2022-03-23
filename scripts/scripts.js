@@ -1,3 +1,5 @@
+
+
 let sex;
 const btnMan = document.querySelector("#man");
 const btnWoman = document.querySelector("#woman");
@@ -67,32 +69,31 @@ function calcularImc() {
     imcResult.innerHTML = imc.toFixed(2);
     imcResult.style.color = description.color;
     descriptionResult.innerHTML = description.message;
+
+    
+
+
+
+
+const mostrarLista = (data, container) => {
+    container.innerHTML = "";
+
+    data.forEach(element => {
+        container.innerHTML += `<td>${element.sex}<td/>`
+        container.innerHTML += `<td>${element.edad} Años<td/>`
+        container.innerHTML += `<td>${element.peso} Kg<td/>`
+        container.innerHTML += `<td>${element.altura}Mts<td/>`
+        container.innerHTML += `<td>${element.imc}<td/>`
+    });
 }
 
-// let listaPacientes = [];
+let lista = [sex, edad.value, peso.value, altura.value, imc, ];
+    localStorage.setItem('registro', JSON.stringify(lista));
+    let listaguardada = localStorage.getItem('registro');
+    console.log('listaObtenida', JSON.parse(listaguardada));
 
-// function agregarPaciente(sex, edad, peso, altura){
-//     let nuevoPaciente = {
-//         sexo: sex,
-//         edad: edad,
-//         peso: peso,
-//         altura: altura
-//     };
-//     console.log(nuevoPaciente);
-//     listaPacientes.push(nuevoPaciente);
-//     localStorageListaPacientes(listaPacientes);
-// }
-
-//     function obtenerListaPacientes(){
-//     var listaGuardada = localStorage.getItem('listaGuardadaLocal');
-//     if (listaGuardada == null){
-//         listaPacientes = [];
-//     } else {
-//         listaPacientes = JSON.parse(listaGuardada);
-//     }
-//     return listaPacientes;
-// }
-// function listaPacientesLocalStorage(lista){
-//     localStorage.setItem('listaGuardadaLocal', Json.stringigy(lista));
-// }
-
+    let contlista = document.getElementById('table-list');
+    document.addEventListener('DOMContentLoaded', () => {
+    mostrarLista(listaguardada, contlista)
+})
+}
